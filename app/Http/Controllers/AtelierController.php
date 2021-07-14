@@ -17,6 +17,7 @@ class AtelierController extends Controller
         $store = new Ingredient();
         $store->nom = $request->nom;
         $store->quantite = $request->quantite;
+        $store->base = $request->base;
         $store->save();
 
         return redirect('/');
@@ -33,4 +34,22 @@ class AtelierController extends Controller
         $show = Ingredient::find($id);
         return view('partials.show', compact('show'));
     }
+
+    public function edit($id){
+        $edit = Ingredient::find($id);
+        return view('pages.edit', compact('edit'));
+    }
+
+    public function update($id, Request $request) {
+        $update = Ingredient::find($id);
+
+        $update->nom = $request->nom;
+        $update->quantite = $request->quantite;
+        $update->base = $request->base;
+        $update->save();
+
+        return redirect('/');
+    }
+
 }
+

@@ -19,5 +19,15 @@ Route::get('/', [IngredientController::class, 'index'])->name('home');
 Route::get('/atelier', [AtelierController::class, 'atelier'])->name('atelier');
 
 Route::post('/', [AtelierController::class, 'store']);
+
+//delete
 Route::delete('/ingredient/{id}/delete', [AtelierController::class, 'destroy']);
+
+//show
 Route::get('/ingredient/{id}/show', [AtelierController::class, 'show']);
+
+//Edit
+Route::get('/ingredient/{id}/edit', [AtelierController::class, 'edit']);
+
+//Update
+Route::put('/ingredient/{id}/update', [AtelierController::class, 'update']);

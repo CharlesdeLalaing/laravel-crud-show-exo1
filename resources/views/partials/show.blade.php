@@ -13,12 +13,15 @@
             <p>ID: {{$show->id}}</p>
             <p>NOM: {{$show->nom}}</p>
             <p>QUANTITE: {{$show->quantite}}</p>
+            <p>VALEUR: {{$show->base}}</p>
 
             <form action="/ingredient/{{$show->id}}/delete" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger text-white" type="submit">DELETE</button>
             </form>
+
+            <a class="btn btn-success text-white" href="/ingredient/{{$show->id}}/edit">EDIT</a>
         </div>
     </section>
 

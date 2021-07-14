@@ -17,6 +17,7 @@ class CreateIngredientsTable extends Migration
             $table->id();
             $table->string('nom');
             $table->integer('quantite');
+            $table->string('base');
             $table->timestamps();
         });
     }

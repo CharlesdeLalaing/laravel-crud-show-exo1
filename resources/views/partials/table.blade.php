@@ -5,6 +5,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Quantité</th>
+                <th scope="col">Valeur</th>
                 <th scope="col">Lien Image</th>
                 <th scope="col"></th>
             </tr>
@@ -15,6 +16,7 @@
                     <th scope="row">{{$ingredient->id}}</th>
                     <td>{{$ingredient->nom}}</td>
                     <td>{{$ingredient->quantite}}</td>
+                    <td>{{$ingredient->base}}</td>
                     <td>public\images\dgball.jpg</td>
                     <td>
                         <form action="/ingredient/{{$ingredient->id}}/delete" method="POST">
